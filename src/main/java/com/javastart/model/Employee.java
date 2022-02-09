@@ -13,6 +13,16 @@ public class Employee {
     private String lastName;
     private double salary;
 
+    public Employee(Long id, String firstName, String lastName, double salary) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.salary = salary;
+    }
+
+    public Employee() {
+    }
+
     public Long getId() {
         return id;
     }
@@ -43,5 +53,15 @@ public class Employee {
 
     public void setSalary(double salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", salary=" + salary +
+                '}';
     }
 }
